@@ -8,6 +8,10 @@ const router = express.Router()
 
 router.get('/', (req, res) => {
     //res.send('Working')
+    res.redirect('/marvellous')
+})
+
+router.get('/marvellous', (req, res) => {
     res.render('pages/index')
 })
 
