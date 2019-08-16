@@ -15,4 +15,26 @@ router.get('/marvellous', (req, res) => {
     res.render('pages/index')
 })
 
+// questions
+router.get('/', (req, res) => {
+    //res.send('Working')
+    res.redirect('/marvellous')
+})
+
+router.get('/marvellous', (req, res) => {
+    res.render('pages/question')
+})
+
+ // results
+router.get('/', (req, res) => {
+    //res.send('Working')
+    res.redirect('/marvellous')
+})
+
+router.get('/marvellous', (req, res) => {
+    res.render('pages/results')
+})
+
+
+
 module.exports = router
