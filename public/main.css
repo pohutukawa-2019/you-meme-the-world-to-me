@@ -4,6 +4,7 @@
   height: 1080px;
   background-color: red;
   text-align: center;
+  padding: 400px 0;
 }
 
 #container-two  {
@@ -49,11 +50,12 @@ body {
   color: black;
 }
 
-.form {
-  display: flex;
+form {
+  display: block;
   flex-direction: column;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
 
 /* Small divs */
@@ -67,6 +69,7 @@ body {
 
 #question {
   display: flex
-
+  margin: 0 100px;
+  
 }
 
