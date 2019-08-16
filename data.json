@@ -1,23 +1,23 @@
 {
-    "personal-input": {
-        "name": "",
-        "choices": []
+  "personalinput": {
+    "name": "",
+    "choices": []
+  },
+  "outputimages": {
+    "heroes": {
+      "thor": "thor",
+      "hulk": "hulk",
+      "scarlett-witch": "scarlett-witch"
     },
-    "output-images": {
-        "heroes": {
-            "thor": "thor",
-            "hulk": "hulk",
-            "scarlett-witch": "scarlett-witch"
-        },
-        "villains": {
-            "thanos": "thanos",
-            "proxima-midnight": "proxima-midnight",
-            "ultron": "ultron"
-        }
-    },
-    "question-images": {
-        "1": "Thor fighting Thanos",
-        "2": "Hulk fighting Proxima Midnight",
-        "3": "Scarlett Witch fighting Ultron"
+    "villains": {
+      "thanos": "thanos",
+      "proxima-midnight": "proxima-midnight",
+      "ultron": "ultron"
     }
+  },
+  "questionimages": {
+    "1": "Thor fighting Thanos",
+    "2": "Hulk fighting Proxima Midnight",
+    "3": "Scarlett Witch fighting Ultron"
+  }
 }

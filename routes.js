@@ -29,11 +29,19 @@ router.get('/marvellous/question', (req, res) => {
 router.post('/marvellous/question', (req, res) => {
     res.render('pages/question')
     decideAlignment((err, alignment) => {
-        alignment.name = req.body.name
-        console.log(alignment)
+        alignment.personalinput.name = req.body.name
+        console.log(alignment.personalinput.name)
+        
         if (err) {
             return res.sendStatus(500)
         }
+        const json = JSON.stringify(alignment, null, 2)
+        console.log(json)
+        fs.writeFile(filePath, json, err => {
+            if (err) {
+                return err
+            }
+        })
     })
 })
 
