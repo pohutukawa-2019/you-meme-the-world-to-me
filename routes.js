@@ -4,7 +4,7 @@ const path = require('path')
 
 const router = express.Router()
 
-//const filePath = path.join(__dirname, 'data.json')
+const filePath = path.join(__dirname, 'data.json')
 
 function decideAlignment (cb) {
     fs.readFile(filePath, 'utf-8', (err, contents) => {
@@ -24,13 +24,13 @@ router.get('/marvellous', (req, res) => {
 
 router.get('/marvellous/question', (req, res) => {
     res.render('pages/question')
-    //res.render('pages/question')
 })
 
-router.post('/marvellous', (req, res) => {
-    decideAlignment((err, data) => {
-        data.name = req.body.name
-        console.log(data)
+router.post('/marvellous/question', (req, res) => {
+    res.render('pages/question')
+    decideAlignment((err, alignment) => {
+        alignment.name = req.body.name
+        console.log(alignment)
         if (err) {
             return res.sendStatus(500)
         }
