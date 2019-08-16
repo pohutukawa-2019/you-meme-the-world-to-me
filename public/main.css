@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 h1, h2 {
     font-family: Arial, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: white;
@@ -18,3 +19,39 @@ body {
     text-align: center;
     margin: 200px 50px;
 }
+||||||| merged common ancestors
+=======
+body {
+  background-color: #FFCCCC;
+  font-family: 'Spirax', cursive;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 230px;
+  height: 230px;
+}
+
+.title {
+  text-align: center;
+}
+
+.nav {
+  text-align: center;
+  color: black;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+>>>>>>> a3fd48969bec066f45db52f4ccf1050a278ab0d8
