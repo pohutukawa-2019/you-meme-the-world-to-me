@@ -22,12 +22,19 @@ router.get('/marvellous', (req, res) => {
     res.render('pages/index')
 })
 
-router.get('/question', (req, res) => {
+router.get('/marvellous/question', (req, res) => {
     res.render('pages/question')
+    //res.render('pages/question')
 })
 
 router.post('/marvellous', (req, res) => {
-    res.redirect('/question')
+    decideAlignment((err, data) => {
+        data.name = req.body.name
+        console.log(data)
+        if (err) {
+            return res.sendStatus(500)
+        }
+    })
 })
 
 module.exports = router
