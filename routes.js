@@ -15,32 +15,42 @@ function decideAlignment (cb) {
 
 router.get('/', (req, res) => {
     //res.send('Working')
-    res.redirect('/marvellous')
+        res.redirect('/marvellous')
 })
 
 router.get('/marvellous', (req, res) => {
-    res.render('pages/index')
+        res.render('pages/index')
 })
 
 router.get('/marvellous/question', (req, res) => {
-    res.render('pages/question')
+    decideAlignment ((err, anything => {
+        if (err) return res.sendStatus(500)
+        res.render('pages/question')
+        console.log(anything)
+    }))
 })
 
 router.post('/marvellous/question', (req, res) => {
     res.render('pages/question')
-    decideAlignment((err, alignment) => {
-        alignment.personalinput.name = req.body.name
-        
+})
+
+router.get('/marvellous/result', (req, res) => {
+    res.render('pages/result')
+})
+
+router.post('/marvellous/result', (req, res) => {
+    decideAlignment((err, anything) => {
+        anything.personalinput.name = req.body.name
         if (err) {
             return res.sendStatus(500)
         }
-        const json = JSON.stringify(alignment, null, 2)
-        console.log(json)
+        const json = JSON.stringify(anything, null, 2)
         fs.writeFile(filePath, json, err => {
             if (err) {
                 return err
             }
         })
+        res.render('pages/result', anything.personalinput)
     })
 })
 

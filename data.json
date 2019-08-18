@@ -1,6 +1,5 @@
 {
   "personalinput": {
-    "name": "Sam",
     "choices": []
   },
   "outputimages": {
@@ -15,9 +14,11 @@
       "ultron": "ultron"
     }
   },
-  "questionimages": {
-    "1": "Thor fighting Thanos",
-    "2": "Hulk fighting Proxima Midnight",
-    "3": "Scarlett Witch fighting Ultron"
+  "questiondata": {
+    "questionimages": {
+      "1": "Thor fighting Thanos",
+      "2": "Hulk fighting Proxima Midnight",
+      "3": "Scarlett Witch fighting Ultron"
+    }
   }
 }
